@@ -19,3 +19,20 @@ header h1 {
 .search {
     width: 80%;
 }
+/* Подвал  */
+footer {
+	margin-top: 2em;
+}
+footer .cc_logo, footer .text, footer .impressum {
+	float: left;
+}
+footer .cc_logo {
+	  padding-right: .5em;
+}
+footer .impressum {
+	float: right;
+}
+.text a {
+	color: #A32C29;
+	text-decoration: none;
+}
