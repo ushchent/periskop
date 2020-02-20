@@ -1,3 +1,0 @@
-Application ID: FG1WJNZR1K
-Search-Only API Key: 01434ca5ac59b159343e9508373599f3
-This is the public API key to use in your frontend code. This key is only usable for search queries and sending data to the Insights API.
