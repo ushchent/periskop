@@ -22,33 +22,31 @@ header h1 {
 /* Подвал  */
 footer {
 	margin-top: 2em;
-<<<<<<< HEAD
-}
-footer .cc_logo, footer .text, footer .impressum {
-=======
     font-size: 0.8em;
+
 }
+
 footer .cc_logo, footer .text {
->>>>>>> dev
+
 	float: left;
 }
 footer .cc_logo {
 	  padding-right: .5em;
 }
-<<<<<<< HEAD
+
 footer .impressum {
 	float: right;
 }
-=======
 
->>>>>>> dev
+
+
 .text a {
 	color: #A32C29;
 	text-decoration: none;
 }
-<<<<<<< HEAD
-=======
+
+
 .extra {
     clear: both;
 }
->>>>>>> dev
+

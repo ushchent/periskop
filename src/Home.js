@@ -21,35 +21,22 @@ componentDidUpdate() {
 				});
 			}
 }
-
 	componentDidMount() {
-<<<<<<< HEAD
+
 		fetch("https://periskop-c44c7.firebaseio.com//indicators_available.json")
-=======
-		fetch("https://periskop-c44c7.firebaseio.com/indicators_available.json")
->>>>>>> dev
 			.then(response => response.json())
 			.then(data => this.setState({ indicators_available: data }));
-
-
 	}
-
-
 	render() {
 
 		return (
 			<React.Fragment>
 				<Header />
 				<SearchBox />
-<<<<<<< HEAD
-				<Test data={ this.state.data } />
-=======
 				<Gallery data={ this.state.data } />
->>>>>>> dev
 				<Footer />
 			</React.Fragment>
 		)
-
 	}
 }
 export default Home;
