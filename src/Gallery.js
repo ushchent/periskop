@@ -1,38 +1,26 @@
 import React from "react";
 import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,} from 'recharts';
 
-class Test extends React.Component {
-	constructor(props) {
-	super(props)
-	this.state = {
-		data: null
-	}
-}
-	componentDidUpdate() {
-		if (this.props.data && this.state.data === null) {
-			const data_loaded = {};
-			this.props.data.forEach(i => {
-				fetch(`/data/${i}.json`)
-					.then(response => response.json())
-					.then(data => data_loaded[i] = { ...data })
-				});
-			this.setState({ data: data_loaded } );
-	}
-		
-	}
-	render() {
-		console.log("Test state is: ", this.state.data);
-		const indicators = [...this.props.data];
-		console.log(indicators);
-		return (
-			<div className="gallery">
-				{ indicators.map( item =>
-					<div className="grafik" key={`ind_${item}`}>{ item }</div>
-					)
-				}
-			</div>
-		)
+const Test = props => {
+			if (props.data.length > 0) {
+				return <div className="gallery">{
+					props.data.map(datum => <div key={datum["k"]}>
+					<h2>{datum["t"]}</h2>
+					<LineChart width={800} height={300} data={datum["d"]} margin={{
+          top: 5, right: 30, left: 20, bottom: 5,
+        }}>
+					    <XAxis dataKey="t" interval="preserveEnd"/>
+						<YAxis/>
+						<Tooltip labelFormatter={() => `${datum["l"]}`}/>
+						
+						<CartesianGrid stroke="#eee" strokeDasharray="2 2"/>
+						<Line type="monotone" dataKey="a" stroke="#8884d8" />
+					</LineChart>
+						</div>)
+				}</div>;
+			} else {
+				return null;
+			}
 	}
 
-}
 export default Test;
