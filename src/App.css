@@ -16,9 +16,43 @@ header h1 {
     padding: 0 .2em;
     font-size: .6em;
 }
+
+/* Поисковая строка */
 .search {
     width: 80%;
 }
+.logo {
+    vertical-align: middle;
+    margin-left: 0.1em;
+}
+
+input {
+
+	padding: .8em 0 .8em .3em;
+	font-size: 1em;
+	border: 1px solid black;
+	background: url("./logo-algolia.png") no-repeat right center;
+	background-size: 30px 30px
+}
+#data_found ul {
+	padding-left: .5em;
+	padding-right: .5em;
+}
+#data_found li {
+	list-style: none;
+	padding: .3em 0;
+}
+#data_found .date {
+	float: right;
+}
+#data_found a {
+	text-decoration: none;
+	color: #A32C29;
+}
+.hidden {
+    display: none;
+}
+
 /* Подвал  */
 footer {
 	margin-top: 2em;
