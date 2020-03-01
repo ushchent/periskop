@@ -31,8 +31,9 @@ input {
 	padding: .8em 0 .8em .3em;
 	font-size: 1em;
 	border: 1px solid black;
-	background: url("./logo-algolia.png") no-repeat right center;
-	background-size: 30px 30px
+	background: url("./logo-algolia.png") no-repeat right center 95% 50%;
+	background-size: 30px 30px;
+	background-origin: content-box;
 }
 #data_found ul {
 	padding-left: .5em;
@@ -51,6 +52,23 @@ input {
 }
 .hidden {
     display: none;
+}
+
+/* Галерея */
+.gallery div {
+	width: 50%;
+}
+.gallery div:nth-child(odd) {
+	float: left;
+}
+.gallery div:nth-child(even) {
+	float: left;
+}
+h2 {
+	font-size: 1.2em;
+}
+.xAxis, .yAxis {
+	font-size: .8em;
 }
 
 /* Подвал  */

@@ -13,7 +13,6 @@ class Home extends React.Component {
 
 componentDidUpdate() {
 		if (this.state.data.length === 0) {
-				const data_loaded = [];
 				this.state.indicators_available.forEach(i => {
 					fetch(`https://periskop-c44c7.firebaseio.com/data/${i}.json`)
 					.then(response => response.json())
@@ -23,7 +22,7 @@ componentDidUpdate() {
 }
 	componentDidMount() {
 
-		fetch("https://periskop-c44c7.firebaseio.com//indicators_available.json")
+		fetch("https://periskop-c44c7.firebaseio.com/indicators_available.json")
 			.then(response => response.json())
 			.then(data => this.setState({ indicators_available: data }));
 	}
