@@ -42,6 +42,7 @@ input {
 #data_found li {
 	list-style: none;
 	padding: .3em 0;
+	cursor: pointer;
 }
 #data_found .date {
 	float: right;
