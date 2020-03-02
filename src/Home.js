@@ -18,7 +18,7 @@ update_indicators_list = event => {
 	document.getElementById("data_found").classList.add("hidden")
 
 
-	if (this.state.indicators_available.indexOf(selected_indicator_id) == -1) {
+	if (this.state.indicators_available.indexOf(selected_indicator_id) === -1) {
 		fetch(`https://periskop-c44c7.firebaseio.com/data/${selected_indicator_id}.json`)
 			.then(response => response.json())
 			.then(data_loaded => this.setState({ data: [...this.state.data, data_loaded] } ))
