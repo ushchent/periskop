@@ -8,7 +8,7 @@ const Test = props => {
 					<h2>{datum["t"]}</h2>
 					<ResponsiveContainer width="95%" height={200}>
 					<LineChart data={datum["d"]} margin={{
-          top: 5, right: 30, left: 20, bottom: 5,
+						top: 5, right: 30, left: 20, bottom: 5,
         }}>
 					    <XAxis dataKey="t" interval="preserveEnd"/>
 						<YAxis/>

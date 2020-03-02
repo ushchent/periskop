@@ -11,6 +11,16 @@ class Home extends React.Component {
 		data: []
 	}
 
+update_indicators_list = event => {
+	const selected_indicator = +event.currentTarget.getAttribute("data-key");
+	console.log("Running");
+	console.log(selected_indicator);
+	if (this.state.indicators_available.indexOf(selected_indicator) == -1) {
+		this.setState({ indicators_available: [...this.state.indicators_available, selected_indicator]})
+	}
+}
+
+// Запускаться после каждого обновления состояния 
 componentDidUpdate() {
 		if (this.state.data.length === 0) {
 				this.state.indicators_available.forEach(i => {
@@ -31,7 +41,7 @@ componentDidUpdate() {
 		return (
 			<React.Fragment>
 				<Header />
-				<SearchBox />
+				<SearchBox update_func={this.update_indicators_list}/>
 				<Gallery data={ this.state.data } />
 				<Footer />
 			</React.Fragment>

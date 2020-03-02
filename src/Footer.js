@@ -3,7 +3,7 @@ import bysa_logo from "./bysa.png";
 
 const Footer = () => (
 	<footer>
-		<div class="extra">
+		<div className="extra">
 		<p>Источники данных: <a href="http://belstat.gov.by">Белстат</a>, <a href="http://nbrb.by">НБРБ</a>, <a href="http://mvd.gov.by">МВД</a>.
             <br/>Репозиторий проекта: <a
             href="https://github.com/ushchent/periskop">github.com/ushchent/periskop.</a>

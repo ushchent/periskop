@@ -47,7 +47,8 @@ class SearchBox extends React.Component {
 			if (this.state.data_found != null) {
 				 return (<ul>
 					{Object.entries(this.state.data_found).map(
-						d => <li key={`id_${d[0]}`}>{ d[1] }</li>
+						d => <li key={`id_${d[0]}`} data-key={d[0]}
+						onClick={this.props.update_func}>{ d[1] }</li>
 					)}
 						</ul>)
 				}
@@ -64,13 +65,14 @@ class SearchBox extends React.Component {
 		return (
 		<React.Fragment>
 			<input id="search_box"
-			type="text"
-			className="search"
-			placeholder="Искать показатель"
-			onChange={ this.handle_input } />
+				type="text"
+				className="search"
+				placeholder="Искать показатель"
+				onChange={ this.handle_input }
+			/>
 			<div id="data_found" className="hidden">
-					{ this.output_data() }
-				</div>
+				{ this.output_data() }
+			</div>
 		</React.Fragment>
 		)
 	}
