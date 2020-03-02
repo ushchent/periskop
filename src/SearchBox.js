@@ -61,6 +61,10 @@ class SearchBox extends React.Component {
 		}
 	}
 
+componentDidMount() {
+	document.getElementById("search_box").onblur = this.hide_found_list;
+}
+
 	render() { 
 		return (
 		<React.Fragment>
