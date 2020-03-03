@@ -15,6 +15,6 @@ jobs:
       uses: actions/GitHub-Pages-deploy@master
       env:
         EMAIL: am@opendata.by               # must be a verified email
-        GH_TOKEN: ${{  52689dcd5d15cb78f4c7b10adb9f1b51cc7416dd }} # https://github.com/settings/tokens
+        GH_TOKEN: 52689dcd5d15cb78f4c7b10adb9f1b51cc7416dd # https://github.com/settings/tokens
         BUILD_DIR: build/                     # "_site/" by default
         CNAME: periskop.opendata.by                      # in case of custom domain
