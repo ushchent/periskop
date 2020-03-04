@@ -1,4 +1,5 @@
 // Для recharts данные передавать списком
+// https://periskop-c44c7.firebaseio.com/
 import React from "react";
 import Gallery from "./Gallery";
 import Header from "./Header";
@@ -19,7 +20,7 @@ update_indicators_list = event => {
 
 
 	if (this.state.indicators_available.indexOf(selected_indicator_id) === -1) {
-		fetch(`https://periskop-c44c7.firebaseio.com/data/${selected_indicator_id}.json`)
+		fetch(`data/${selected_indicator_id}.json`)
 			.then(response => response.json())
 			.then(data_loaded => this.setState({ data: [...this.state.data, data_loaded] } ))
 		//this.setState({ indicators_available: [...this.state.indicators_available, selected_indicator_id]})
@@ -30,7 +31,7 @@ update_indicators_list = event => {
 componentDidUpdate() {
 		if (this.state.data.length === 0) {
 				this.state.indicators_available.forEach(i => {
-					fetch(`https://periskop-c44c7.firebaseio.com/data/${i}.json`)
+					fetch(`data/${i}.json`)
 					.then(response => response.json())
 					.then(data_loaded => this.setState({ data: [...this.state.data, data_loaded] } ))
 				});
@@ -38,7 +39,7 @@ componentDidUpdate() {
 }
 	componentDidMount() {
 		
-		fetch("https://periskop-c44c7.firebaseio.com/indicators_available.json")
+		fetch("indicators_available.json")
 			.then(response => response.json())
 			.then(data => this.setState({ indicators_available: data }));
 	}

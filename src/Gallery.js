@@ -13,7 +13,7 @@ class Gallery extends React.Component {
 							handle=".handle"
 							defaultPosition={{x: 0, y: 0}}
 							position={null}
-							grid={[25, 25]}
+							grid={[15, 15]}
 							scale={1}
 							onStart={this.handleStart}
 							onDrag={this.handleDrag}
@@ -26,8 +26,8 @@ class Gallery extends React.Component {
 									<LineChart data={datum["d"]} margin={{
 										top: 5, right: 30, left: 20, bottom: 5,
 						}}>
-										<XAxis dataKey="t" interval="preserveEnd"/>
-										<YAxis/>
+										<XAxis dataKey="t" interval="preserveStartEnd" />
+										<YAxis interval="preserveStartEnd" type="number" domain={[0, 'dataMax + 1000']}/>
 										<Tooltip labelFormatter={() => `${datum["l"]}`}/>
 										
 										<CartesianGrid stroke="#eee" strokeDasharray="2 2"/>
