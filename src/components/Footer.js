@@ -1,5 +1,5 @@
 import React from "react";
-import bysa_logo from "./bysa.png";
+import bysa_logo from "../img/bysa.png";
 
 const Footer = () => (
 	<footer>

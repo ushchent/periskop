@@ -3,7 +3,6 @@
 data/
 docs/
 .gitignore
-zoom/
 
 # dependencies
 /node_modules

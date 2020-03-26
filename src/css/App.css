@@ -19,7 +19,7 @@ header h1 {
 
 /* Поисковая строка */
 .search {
-    width: 80%;
+    width: 100%;
 }
 .logo {
     vertical-align: middle;
@@ -73,6 +73,18 @@ h2 {
 .xAxis, .yAxis {
 	font-size: .6em;
 }
+
+	.axis path,
+	.axis line {
+		fill: none;
+	  stroke: black;
+	  shape-rendering: crispEdges;
+	}
+ .line {
+        fill: none;
+        stroke: steelblue;
+        stroke-width: 1.5px;
+    }
 
 /* Подвал  */
 footer {
