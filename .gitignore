@@ -3,6 +3,7 @@
 data/
 docs/
 .gitignore
+package-lock.json
 
 # dependencies
 /node_modules
