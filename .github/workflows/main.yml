@@ -1,0 +1,24 @@
+name: deploy
+
+on:
+    push:
+        branches:
+            - master
+
+jobs:
+    build-and-deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@master
+
+            - name: Build and Deploy
+              uses: ./.github/actions/deploy
+              env:
+                  COMMIT_EMAIL: am@opendata.by
+                  COMMIT_NAME: ushchent
+                  ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+                  BASE_BRANCH: master
+                  DEPLOY_BRANCH: gh-pages
+                  BUILD_SCRIPT: npm run build
+                  FOLDER: build
